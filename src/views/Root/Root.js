@@ -4,7 +4,8 @@ import Button from '../../components/Button/Button';
 const Root = () => (
   <div>
     <h1>Hello Miron</h1>
-    <Button>Hello Hello</Button>
+    <Button width="500px">Close / Save</Button>
+    <Button secondary>Remove</Button>
   </div>
 );
 
