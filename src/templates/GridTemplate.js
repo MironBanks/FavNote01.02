@@ -5,6 +5,7 @@ import UserPageTemplate from './UserPageTemplate';
 import Input from '../components/atoms/Input/Input';
 import Heading from '../components/atoms/Heading/Heading';
 import Paragraph from '../components/atoms/Paragraph/Paragraph';
+import withContext from '../hoc/withContext';
 
 const StyledWrapper = styled.div`
   padding: 25px 150px 25px 70px;
@@ -14,6 +15,15 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 85px;
+
+  @media (max-width: 1500px) {
+    grid-gap: 45px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StyledPageHeader = styled.div`
@@ -33,7 +43,8 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
-const GridTemplate = ({ children, pageType }) => (
+// eslint-disable-next-line no-unused-vars
+const GridTemplate = ({ children, pageType, context }) => (
   <UserPageTemplate pageType={pageType}>
     <StyledWrapper>
       <StyledPageHeader>
@@ -49,6 +60,7 @@ const GridTemplate = ({ children, pageType }) => (
 );
 
 GridTemplate.propTypes = {
+  context: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
   pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
 };
@@ -57,4 +69,4 @@ GridTemplate.defaultProps = {
   pageType: 'notes',
 };
 
-export default GridTemplate;
+export default withContext(GridTemplate);

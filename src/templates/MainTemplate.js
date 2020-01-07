@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../Theme/GlobalStyle';
 import { theme } from '../Theme/mainTheme';
+import PageContext from '../context/index';
 
 class MainTemplate extends Component {
   // eslint-disable-next-line react/state-in-constructor
@@ -29,17 +30,19 @@ class MainTemplate extends Component {
 
     if (prevState.pageType !== currentPage) {
       this.setState({ pageType: currentPage });
-      console.log(this.state);
     }
   };
 
   render() {
     const { children } = this.props;
+    const { pageType } = this.state;
 
     return (
       <div>
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <PageContext.Provider value={pageType}>
+          <GlobalStyle />
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </PageContext.Provider>
       </div>
     );
   }
