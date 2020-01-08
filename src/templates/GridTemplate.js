@@ -43,16 +43,15 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
-// eslint-disable-next-line no-unused-vars
-const GridTemplate = ({ children, pageType, context }) => (
-  <UserPageTemplate pageType={pageType}>
+const GridTemplate = ({ children, pageContext }) => (
+  <UserPageTemplate>
     <StyledWrapper>
       <StyledPageHeader>
         <Input search placeholder="Search" />
         <StyledHeading big as="h1">
-          {pageType}
+          {pageContext}
         </StyledHeading>
-        <StyledParagraph>6 {pageType}</StyledParagraph>
+        <StyledParagraph>6 {pageContext}</StyledParagraph>
       </StyledPageHeader>
       <StyledGrid>{children}</StyledGrid>
     </StyledWrapper>
@@ -60,13 +59,12 @@ const GridTemplate = ({ children, pageType, context }) => (
 );
 
 GridTemplate.propTypes = {
-  context: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
-  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+  pageContext: PropTypes.oneOf(['notes', 'twitters', 'articles']),
 };
 
 GridTemplate.defaultProps = {
-  pageType: 'notes',
+  pageContext: 'notes',
 };
 
 export default withContext(GridTemplate);
