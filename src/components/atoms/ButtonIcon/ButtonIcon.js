@@ -15,6 +15,12 @@ const ButtonIcon = styled.button`
   &.active {
     background-color: white;
   }
+
+  @media only screen and (max-width: 500px) {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+  }
 `;
 
 export default ButtonIcon; // ButtonIcon component

@@ -13,6 +13,10 @@ import plusIcon from '../assets/icons/plus.svg';
 const StyledWrapper = styled.div`
   position: relative;
   padding: 25px 150px 25px 70px;
+
+  @media only screen and (max-width: 500px) {
+    padding: 0px 10px 0px 10px;
+  }
 `;
 
 const StyledGrid = styled.div`

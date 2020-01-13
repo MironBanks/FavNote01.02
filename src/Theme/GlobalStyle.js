@@ -17,6 +17,10 @@ body {
     padding-left:150px;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
+
+    @media only screen and (max-width: 500px) {
+    padding-left: 80px;
+  }
 }
 `;
 

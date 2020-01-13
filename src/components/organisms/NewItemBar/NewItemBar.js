@@ -24,6 +24,10 @@ const StyledWrapper = styled.div`
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transform: translate(${({ isVisible }) => (isVisible ? '0' : '100%')});
   transition: transform 0.25s ease-in-out;
+
+  @media only screen and (max-width: 500px) {
+    width: 100vw;
+  }
 `;
 
 const StyledForm = styled(Form)`
