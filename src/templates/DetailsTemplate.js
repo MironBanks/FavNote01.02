@@ -55,6 +55,13 @@ const StyledImage = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
+
+  @media only screen and (max-width: 500px) {
+    width: 60px;
+    height: 60px;
+    top: 80px;
+    right: 5px;
+  }
 `;
 
 const DetailsTemplate = ({ pageContext, title, created, content, articleUrl, twitterName }) => (
