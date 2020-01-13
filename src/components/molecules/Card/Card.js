@@ -58,10 +58,10 @@ const StyledAvatar = styled.img`
   top: 25px;
 
   @media only screen and (max-width: 500px) {
-    width: 66px;
-    height: 66px;
+    width: 47px;
+    height: 47px;
     right: 25px;
-    top: 30px;
+    top: 50px;
   }
 `;
 
