@@ -17,6 +17,10 @@ const Button = styled.button`
   font-size: 16px;
   text-transform: uppercase;
 
+  @media only screen and (max-width: 500px) {
+    height: 27px;
+  }
+
   ${({ secondary }) =>
     secondary &&
     css`

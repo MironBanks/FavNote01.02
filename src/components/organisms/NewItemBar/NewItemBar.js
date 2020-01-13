@@ -26,6 +26,7 @@ const StyledWrapper = styled.div`
   transition: transform 0.25s ease-in-out;
 
   @media only screen and (max-width: 500px) {
+    padding: 20px 20px;
     width: 100vw;
   }
 `;

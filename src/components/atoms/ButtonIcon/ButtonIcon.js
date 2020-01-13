@@ -12,14 +12,12 @@ const ButtonIcon = styled.button`
   border: none;
   background-color: ${({ active }) => (active ? 'white' : 'transparent')};
 
-  &.active {
-    background-color: white;
+  @media only screen and (max-width: 500px) {
+    background-size: 30%;
   }
 
-  @media only screen and (max-width: 500px) {
-    width: 45px;
-    height: 45px;
-    border-radius: 15px;
+  &.active {
+    background-color: white;
   }
 `;
 

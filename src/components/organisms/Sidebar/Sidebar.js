@@ -41,6 +41,7 @@ const StyledLogoLink = styled(NavLink)`
   @media only screen and (max-width: 500px) {
     width: 45px;
     height: 45px;
+    background-size: 100%;
   }
 `;
 
