@@ -59,6 +59,11 @@ const StyledButtonIcon = styled(ButtonIcon)`
   background-size: 35%;
   border-radius: 50px;
   z-index: 10000;
+
+  @media only screen and (max-width: 500px) {
+    bottom: 20px;
+    right: 20px;
+  }
 `;
 
 class GridTemplate extends Component {

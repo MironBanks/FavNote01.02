@@ -16,6 +16,10 @@ const StyledWrapper = styled.div`
   @media (max-width: 1200px) {
     max-width: 80vw;
   }
+
+  @media only screen and (max-width: 500px) {
+    padding: 10px 0px 10px 0px;
+  }
 `;
 
 const StyledPageHeader = styled.div`
