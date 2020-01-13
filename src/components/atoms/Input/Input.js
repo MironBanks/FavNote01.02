@@ -9,6 +9,10 @@ const Input = styled.input`
   border: none;
   border-radius: 50px;
 
+  @media only screen and (max-width: 500px) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+  }
+
   ::placeholder {
     text-transform: uppercase;
     letter-spacing: 1px;

@@ -56,6 +56,13 @@ const StyledAvatar = styled.img`
   position: absolute;
   right: 25px;
   top: 25px;
+
+  @media only screen and (max-width: 500px) {
+    width: 66px;
+    height: 66px;
+    right: 25px;
+    top: 30px;
+  }
 `;
 
 const StyledLinkButton = styled.a`
@@ -63,6 +70,7 @@ const StyledLinkButton = styled.a`
   width: 47px;
   height: 47px;
   border-radius: 50px;
+  border: 5px solid ${({ theme }) => theme.articles};
   background: white url(${LinkIcon}) no-repeat;
   background-size: 60%;
   background-position: 50%;
@@ -70,6 +78,11 @@ const StyledLinkButton = styled.a`
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media only screen and (max-width: 500px) {
+    right: 25px;
+    top: 90%;
+  }
 `;
 
 class Card extends Component {
